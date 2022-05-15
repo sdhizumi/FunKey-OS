@@ -1,12 +1,8 @@
 [Desktop Entry]
-Type=Application
-Name=PS1
-Comment=PS1 Emulator
+Name=PlayStation
+Comment=PlayStation emulator
 Icon=ps1
 Exec=/usr/games/launchers/psone_launch_pcsx.sh %f
-Terminal=false
-X-OD-NeedsDownscaling=true
-Categories=emulators;
-selectorbrowser=true
+Categories=emulators
 SelectorDir=/mnt/PS1
 SelectorFilter=bin,BIN,cue,CUE,pbp,PBP

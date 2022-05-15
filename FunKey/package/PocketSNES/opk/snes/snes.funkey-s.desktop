@@ -1,12 +1,8 @@
 [Desktop Entry]
-Type=Application
-Name=SNES
-Comment=SNES Emulator
+Name=Super NES
+Comment=Super NES emulator
 Icon=snes
 Exec=/usr/games/launchers/snes_launch.sh %f
-Terminal=false
-X-OD-NeedsDownscaling=true
-Categories=emulators;
-selectorbrowser=true
+Categories=emulators
 SelectorDir=/mnt/SNES
 SelectorFilter=sfc,SFC,smc,SMC,zip,ZIP

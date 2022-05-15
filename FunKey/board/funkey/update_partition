@@ -53,6 +53,9 @@ do_postinst()
     # Fix PCE opk name if necessary
     #mv /mnt/Emulators/pce_mednaefn_funkey-s.opk /mnt/Emulators/pce_mednafen_funkey-s.opk 1>/dev/null 2>&1
 
+    # Remove separate GB and GBC OPKs (now using one single GB/GBC instead)
+    rm /mnt/Emulators/gb_gnuboy_funkey-s.opk /mnt/Emulators/gbc_gnuboy_funkey-s.opk
+
     # Unmount Rootfs
     umount ${root_mount}
     if [ $? -ne 0 ]; then
