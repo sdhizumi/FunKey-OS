@@ -41,7 +41,7 @@ while true; do
 	cpu=$(printf "%.0f\n" $(mpstat -P ALL $UPDATE_PERIOD 1 | tail -1 | awk '{print 100-$12}'))
 	ram_mem=$(printf "%.0f\n" $(free | grep Mem | awk '{print $3/$2 * 100.0}'))
 	ram_swap=$(printf "%.0f\n" $(free | grep Swap | awk '{print $3/$2 * 100.0}'))
-	battery=$(printf "%.0f\n" $(cat /tmp/current_battery_percentage))
+	battery=$(printf "%.0f\n" $(cat /sys/class/power_supply/axp20x-battery/capacity))
 	ip_addr=$(ifconfig usb0 | grep "inet " | awk -F'[: ]+' '{ print $4 }')
 
 	# Notif
