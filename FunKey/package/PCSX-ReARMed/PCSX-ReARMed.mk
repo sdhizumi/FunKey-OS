@@ -4,9 +4,9 @@
 #
 ################################################################################
 
-PCSX_REARMED_VERSION = pcsx_rearmed-FunKey-1.2.2
+PCSX_REARMED_VERSION = v1.2.3-funkey-s
 PCSX_REARMED_SITE_METHOD = git
-PCSX_REARMED_SITE = https://github.com/FunKey-Project/pcsx_rearmed.git
+PCSX_REARMED_SITE = https://github.com/DrUm78/pcsx_rearmed.git
 PCSX_REARMED_LICENSE = GPL-2.0
 PCSX_REARMED_LICENSE_FILES = COPYING
 

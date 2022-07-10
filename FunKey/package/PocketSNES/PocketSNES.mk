@@ -4,9 +4,9 @@
 #
 ################################################################################
 
-POCKETSNES_VERSION = PocketSNES-FunKey-1.2.2
+POCKETSNES_VERSION = v1.3-funkey-s
 POCKETSNES_SITE_METHOD = git
-POCKETSNES_SITE = https://github.com/FunKey-Project/PocketSNES.git
+POCKETSNES_SITE = https://github.com/DrUm78/PocketSNES.git
 POCKETSNES_LICENSE = GPL-2.0
 POCKETSNES_LICENSE_FILES = COPYING
 
