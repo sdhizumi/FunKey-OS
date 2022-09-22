@@ -4,9 +4,9 @@
 #
 ################################################################################
 
-GNUBOY_VERSION = gnuboy-FunKey-1.2.2
+GNUBOY_VERSION = v1.2.3-funkey-s
 GNUBOY_SITE_METHOD = git
-GNUBOY_SITE = https://github.com/FunKey-Project/gnuboy.git
+GNUBOY_SITE = https://github.com/DrUm78/gnuboy.git
 GNUBOY_LICENSE = GPL-2.0
 GNUBOY_LICENSE_FILES = COPYING
 
