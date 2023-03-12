@@ -47,7 +47,7 @@ do_postinst()
     # Copy OPKs
     cp -r ${root_mount}/usr/local/share/OPKs/* /mnt
 
-    # Copy freware games and other necessary mnt files
+    # Copy freeware games and other necessary mnt files
     unzip -q -o ${root_mount}/usr/local/share/mnt_files.zip -d /mnt/
 
     # Fix PCE opk name if necessary
