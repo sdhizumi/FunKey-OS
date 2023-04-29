@@ -1,11 +1,17 @@
 #!/bin/sh
 
-cd /opt/picoarch
-./package
-cp picoarch /opt/FunKey-OS/FunKey/board/funkey/rootfs-overlay/usr/games/
-cp picoarch_funkey-s.opk /opt/FunKey-OS/FunKey/board/funkey/rootfs-overlay/usr/local/share/OPKs/Libretro/
+rm -rf FunKey/output/build/picoarch
+mkdir -p FunKey/output/build/picoarch
+cd FunKey/output/build/picoarch
+git clone https://github.com/DrUm78/picoarch .
+git submodule update --init
+make picoarch platform=funkey-s
+cp README.funkey-s.md opk/
+mksquashfs opk/ picoarch_funkey-s.opk -all-root -noappend -no-exports -no-xattrs
+cp picoarch ../../../board/funkey/rootfs-overlay/usr/games/
+cp picoarch_funkey-s.opk ../../../board/funkey/rootfs-overlay/usr/local/share/OPKs/Libretro/
 
-cd ../FunKey-OS
+cd -
 make
 
 rm -f FunKey/board/funkey/rootfs-overlay/usr/games/picoarch
