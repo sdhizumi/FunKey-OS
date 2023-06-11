@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=PicoArch
+Comment=SDL Libretro frontend
+Exec=/usr/games/picoarch %f
+Icon=picoarch
+Categories=games
+SelectorFilter=so
