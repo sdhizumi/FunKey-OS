@@ -8,91 +8,174 @@ DEFAULT_VOLUME_VALUE=50
 MINIMUM_VOLUME=16
 VOLUME_STEP=10
 NOTIF_DURATION=2
-
+DEFAULT_CARD1_FILE="/mnt/FunKey/.asoundrc"
+DEFAULT_CARD1_VOLUME_FILE="/mnt/FunKey/card1Volume"
 usage() {
     >&2 echo "Usage: ${SELF} get"
     >&2 echo "       ${SELF} set  new_volume_percentage"
     exit 1
 }
 
+create_card1volume() {
+	if ! [ -f ${DEFAULT_CARD1_VOLUME_FILE} ]; then
+		touch /mnt/FunKey/card1Volume
+		echo 50 > /mnt/FunKey/card1Volume
+		amixer -c 1 -q sset 'PCM' 50% unmute
+		fw_setenv volume 50
+	fi
+}
+
 increase_volume() {
+if [ -f ${DEFAULT_CARD1_FILE} ]; then
+	if [ -f ${DEFAULT_CARD1_VOLUME_FILE} ]; then
+		local current_volume=$(cat /mnt/FunKey/card1Volume)
+		local new_volume=0
+		let new_volume=${current_volume}+${VOLUME_STEP}
+		if [ ${new_volume} -gt 100 ]; then
+		   new_volume=100
+		fi
 
-    # Get current value
-    local current_volume=$(get_volume)
+		# Change volume
+		if [ ${new_volume} -ne ${current_volume} ]; then
+			amixer -c 1 -q sset 'PCM' ${new_volume}% unmute
+			echo ${new_volume} > /mnt/FunKey/card1Volume
+		fi
+		# Notif
+		notif set ${NOTIF_DURATION} "         VOLUME: ${new_volume}%%"
+	else
+		create_card1volume
+	fi
+else
+	# Get current value
+	local current_volume=$(get_volume)
 
-    # Compute new volume value
-    local new_volume=0
-    let new_volume=${current_volume}+${VOLUME_STEP}
-    if [ ${new_volume} -gt 100 ]; then
+	# Compute new volume value
+	local new_volume=0
+	let new_volume=${current_volume}+${VOLUME_STEP}
+	if [ ${new_volume} -gt 100 ]; then
 	   new_volume=100
-    fi
+	fi
 
-    # Change volume
-    if [ ${new_volume} -ne ${current_volume} ]; then
+	# Change volume
+	if [ ${new_volume} -ne ${current_volume} ]; then
 	   set_volume ${new_volume}
-    fi
+	fi
 
-    # Notif
-    notif set ${NOTIF_DURATION} "         VOLUME: ${new_volume}%%"
+	# Notif
+	notif set ${NOTIF_DURATION} "         VOLUME: ${new_volume}%%"
+fi
 }
 
 decrease_volume() {
+if [ -f ${DEFAULT_CARD1_FILE} ]; then
+	if [ -f ${DEFAULT_CARD1_VOLUME_FILE} ]; then
+		local current_volume=$(cat /mnt/FunKey/card1Volume)
+		local new_volume=0
+		if [ ${current_volume} -ge ${VOLUME_STEP} ]; then
+		   let new_volume=${current_volume}-${VOLUME_STEP}
+		fi
 
-    # Get current value
-    local current_volume=$(get_volume)
+		# Change volume
+		if [ ${new_volume} -ne ${current_volume} ]; then
+			amixer -c 1 -q sset 'PCM' ${new_volume}% unmute
+			echo ${new_volume} > /mnt/FunKey/card1Volume
+		fi
+		# Notif
+		notif set ${NOTIF_DURATION} "         VOLUME: ${new_volume}%%"
+	else
+		create_card1volume
+	fi
+else
+	# Get current value
+	local current_volume=$(get_volume)
 
-    # Compute new volume value
-    local new_volume=0
-    if [ ${current_volume} -gt ${VOLUME_STEP} ]; then
+	# Compute new volume value
+	local new_volume=0
+	if [ ${current_volume} -gt ${VOLUME_STEP} ]; then
 	   let new_volume=${current_volume}-${VOLUME_STEP}
-    fi
+	fi
 
-    # Change volume
-    if [ ${new_volume} -ne ${current_volume} ]; then
+	# Change volume
+	if [ ${new_volume} -ne ${current_volume} ]; then
 	   set_volume ${new_volume}
-    fi
+	fi
 
-    # Notif
-    notif set ${NOTIF_DURATION} "         VOLUME: ${new_volume}%%"
+	# Notif
+	notif set ${NOTIF_DURATION} "         VOLUME: ${new_volume}%%"
+fi
 }
 
 get_volume() {
+if [ -f ${DEFAULT_CARD1_FILE} ]; then
+	local volume=$(cat /mnt/FunKey/card1Volume)
+	if [ -f ${DEFAULT_CARD1_VOLUME_FILE} ]; then
+		if ! [ ! "${volume}" -ne "${volume}" ] 2> /dev/null; then
+			volume=${DEFAULT_VOLUME_VALUE}
+			amixer -c 1 -q sset 'PCM' ${volume}% unmute
+			fw_setenv volume ${volume}
+		fi
+		echo $(cat /mnt/FunKey/card1Volume)
+	else
+		create_card1volume
+		echo $(cat /mnt/FunKey/card1Volume)
+	fi
+else
     local volume=$(fw_printenv -n volume 2>/dev/null)
     if ! [ ! "${volume}" -ne "${volume}" ] 2> /dev/null; then
 	volume=${DEFAULT_VOLUME_VALUE}
 	fw_setenv volume ${volume}
     fi
     echo ${volume}
+fi
 }
 
 set_volume() {
-
+if [ -f ${DEFAULT_CARD1_FILE} ]; then
+	if [ -f ${DEFAULT_CARD1_VOLUME_FILE} ]; then
+		local current_volume=$(cat /mnt/FunKey/card1Volume)
+		local new_volume=${1}
+		if [ ${?} -eq 0 -a ${current_volume} -ne ${new_volume} ]; then
+			amixer -c 1 -q sset 'PCM' ${new_volume}% unmute
+			# Set the new volume value in a bootloader variable
+			if [ ${?} -eq 0 -a ${current_volume} -ne ${new_volume} ]; then
+			   fw_setenv volume ${new_volume}
+			fi
+			echo ${new_volume} > /mnt/FunKey/card1Volume
+		fi
+		if [ ${new_volume} -eq 0 ]; then
+		   audio_amp off
+		else
+		   audio_amp on
+		fi
+	else
+		create_card1volume
+	fi
+else
     local current_volume=$(get_volume)
 
     # Set the new volume value (from 0 to 63) into ALSA
     local new_volume=${1}
     local alsa_volume=$(echo "a = $new_volume * (63 - $MINIMUM_VOLUME) / 100 + \
         $MINIMUM_VOLUME + 0.5; scale = 0; a / 1" | bc -l)
-    amixer -q sset 'Headphone' ${alsa_volume} unmute
-
+    amixer -c 0 -q sset 'Headphone' ${alsa_volume} unmute
     # Set the new volume value in a bootloader variable
     if [ ${?} -eq 0 -a ${current_volume} -ne ${new_volume} ]; then
 	   fw_setenv volume ${new_volume}
     fi
 
     # Turn on/off audio amplifier if necessary
-    # Check whether Factory tests are scheduled (audio_amp must be on for the sound test)
-    RUN_ENV_VAR=$(fw_printenv -n assembly_tests 2>/dev/null)
-    if [ "x${RUN_ENV_VAR}" == "x1" ]; then
-       audio_amp on
-    # Turn audio_amp off when using system volume shortcuts while no OPK is launched and GMenu2X is set as the frontend
-    elif [ ! -f /mnt/last_opk ] && grep -q "gmenu2x" /mnt/FunKey/.frontend; then
-       audio_amp off
-    elif [ ${new_volume} -eq 0 ]; then
-       audio_amp off
+    if [ ${new_volume} -eq 0 ]; then
+	   audio_amp off
     else
-       audio_amp on
+	   audio_amp on
     fi
+fi
+}
+
+set_usb_audio_init_volume() {
+	create_card1volume
+	local current_volume=$(cat /mnt/FunKey/card1Volume)
+	amixer -c 1 -q sset 'PCM' ${current_volume}% unmute
 }
 
 # Check number of arguments
@@ -134,6 +217,13 @@ case "${1}" in
 	else
 	    usage
 	fi
+    ;;
+
+    usbaudioinit)
+	if [ ${#} -ne 1 ]; then
+	    usage
+	fi
+	set_usb_audio_init_volume
     ;;
 
     *)

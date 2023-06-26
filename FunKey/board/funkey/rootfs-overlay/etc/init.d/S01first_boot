@@ -8,6 +8,7 @@ case "$1" in
 	if ! [ ! "${first_boot_ok}" -ne "${first_boot_ok}" ] 2> /dev/null; then
 	    first_boot
 	fi
+	!(hwclock) && date --set "2023-01-01 00:00:00" && hwclock -uw
 	;;
     stop)
 	;;

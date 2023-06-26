@@ -1,0 +1,24 @@
+#!/bin/sh
+#
+# Start/stop poweroffthread
+#
+
+CARD1_DIR="/proc/asound/card1"
+
+case "$1" in
+  start)
+	if [ -d ${CARD1_DIR} ]; then
+		/usr/local/sbin/volume usbaudioinit
+	fi
+	;;
+  stop)
+	;;
+  restart)
+	${0} stop
+	sleep 1 # Prevent race condition: ensure low_bat_check stops before start.
+	${0} start
+	;;
+  *)
+	echo "Usage: ${0} {start|stop|restart}"
+	exit 1
+esac

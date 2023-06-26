@@ -1,0 +1,62 @@
+#!/bin/sh
+
+CARD1_DIR="/proc/asound/card1"
+#CARD1_NAME="/proc/asound/card1/id"
+DEFAULT_CARD1_FILE="/mnt/FunKey/.asoundrc"
+SLEEP_SECS=1
+usb_audio_out=0
+while true; do
+	if [ ! -d ${CARD1_DIR} ]; then
+		if [ -f ${DEFAULT_CARD1_FILE} ]; then
+			rm -rf ${DEFAULT_CARD1_FILE}
+		fi
+		if [ ${usb_audio_out} -eq 1 ]; then
+			usb_audio_out=0
+			#/sbin/reboot
+			(pgrep mednafen | xargs kill -9)&&touch /tmp/exitgame
+			(pgrep sdlgnuboy | xargs kill -9)&&touch /tmp/exitgame
+			(pgrep gpsp | xargs kill -9)&&touch /tmp/exitgame
+			(pgrep PicoDrive | xargs kill -9)&&touch /tmp/exitgame
+			(pgrep fceux | xargs kill -9)&&touch /tmp/exitgame
+			(pgrep pcsx | xargs kill -9)&&touch /tmp/exitgame
+			(pgrep sdlretro | xargs kill -9)&&touch /tmp/exitgame
+			(pgrep psnes | xargs kill -9)&&touch /tmp/exitgame
+		fi
+	else
+#		if [ "$(cat ${CARD1_NAME})" == "KMHIFI384KHZ" ]; then
+		if [ ! -f ${DEFAULT_CARD1_FILE} ]; then
+cat > ${DEFAULT_CARD1_FILE} <<EOF
+pcm.!default {
+
+type asym
+
+playback.pcm {
+
+type plug
+
+slave.pcm "hw:1,0"
+
+}
+
+capture.pcm {
+
+type plug
+
+slave.pcm "hw:1,0"
+
+}
+
+}
+defaults.ctl.card 1
+defaults.pcm.card 1
+defaults.timer.card 1
+EOF
+/etc/init.d/S50alsa-utils restart
+/usr/local/sbin/volume usbaudioinit
+usb_audio_out=1
+		fi	
+#		fi
+	fi
+	sleep ${SLEEP_SECS}
+done
+exit 0
