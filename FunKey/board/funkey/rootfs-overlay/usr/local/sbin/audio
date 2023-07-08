@@ -21,6 +21,12 @@ while true; do
 			(pgrep pcsx | xargs kill -9)&&touch /tmp/exitgame
 			(pgrep sdlretro | xargs kill -9)&&touch /tmp/exitgame
 			(pgrep psnes | xargs kill -9)&&touch /tmp/exitgame
+			(pgrep picoarch | xargs kill -9)&&touch /tmp/exitgame
+			(pgrep mplayer | xargs kill -9)&&touch /tmp/exitgame
+			(pgrep sms_sdl | xargs kill -9)&&touch /tmp/exitgame
+			(pgrep swanemu | xargs kill -9)&&touch /tmp/exitgame
+			(pgrep vbanext.elf | xargs kill -9)&&touch /tmp/exitgame
+			(pgrep vb.elf | xargs kill -9)&&touch /tmp/exitgame
 		fi
 	else
 #		if [ "$(cat ${CARD1_NAME})" == "KMHIFI384KHZ" ]; then
