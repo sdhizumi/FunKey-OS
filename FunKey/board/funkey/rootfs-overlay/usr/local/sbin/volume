@@ -21,6 +21,7 @@ create_card1volume() {
 		touch /mnt/FunKey/card1Volume
 		echo 50 > /mnt/FunKey/card1Volume
 		amixer -c 1 -q sset 'PCM' 50% unmute
+		amixer -c 1 -q sset 'Headphone' 50% unmute
 		fw_setenv volume 50
 	fi
 }
@@ -38,6 +39,7 @@ if [ -f ${DEFAULT_CARD1_FILE} ]; then
 		# Change volume
 		if [ ${new_volume} -ne ${current_volume} ]; then
 			amixer -c 1 -q sset 'PCM' ${new_volume}% unmute
+			amixer -c 1 -q sset 'Headphone' ${new_volume}% unmute
 			echo ${new_volume} > /mnt/FunKey/card1Volume
 		fi
 		# Notif
@@ -78,6 +80,7 @@ if [ -f ${DEFAULT_CARD1_FILE} ]; then
 		# Change volume
 		if [ ${new_volume} -ne ${current_volume} ]; then
 			amixer -c 1 -q sset 'PCM' ${new_volume}% unmute
+			amixer -c 1 -q sset 'Headphone' ${new_volume}% unmute
 			echo ${new_volume} > /mnt/FunKey/card1Volume
 		fi
 		# Notif
@@ -112,6 +115,7 @@ if [ -f ${DEFAULT_CARD1_FILE} ]; then
 		if ! [ ! "${volume}" -ne "${volume}" ] 2> /dev/null; then
 			volume=${DEFAULT_VOLUME_VALUE}
 			amixer -c 1 -q sset 'PCM' ${volume}% unmute
+			amixer -c 1 -q sset 'Headphone' ${volume}% unmute
 			fw_setenv volume ${volume}
 		fi
 		echo $(cat /mnt/FunKey/card1Volume)
@@ -136,6 +140,7 @@ if [ -f ${DEFAULT_CARD1_FILE} ]; then
 		local new_volume=${1}
 		if [ ${?} -eq 0 -a ${current_volume} -ne ${new_volume} ]; then
 			amixer -c 1 -q sset 'PCM' ${new_volume}% unmute
+			amixer -c 1 -q sset 'Headphone' ${new_volume}% unmute
 			# Set the new volume value in a bootloader variable
 			if [ ${?} -eq 0 -a ${current_volume} -ne ${new_volume} ]; then
 			   fw_setenv volume ${new_volume}
@@ -176,6 +181,7 @@ set_usb_audio_init_volume() {
 	create_card1volume
 	local current_volume=$(cat /mnt/FunKey/card1Volume)
 	amixer -c 1 -q sset 'PCM' ${current_volume}% unmute
+	amixer -c 1 -q sset 'Headphone' ${current_volume}% unmute
 }
 
 # Check number of arguments
