@@ -80,7 +80,7 @@ $ sudo apt install bash bc binutils build-essential bzip2 ca-certificates cpio c
 When using either physical or virtual Linux machines, you must clone the FunKey OS repository from Github (here we place it into a `FunKey-OS` directory):
 
 ```bash
-$ git clone https://github.com/FunKey-Project/FunKey-OS.git FunKey-OS
+$ git clone https://github.com/sdhizumi/FunKey-OS.git FunKey-OS
 ```
 
 Then enter into the created directory:
@@ -108,7 +108,7 @@ After building, you should obtain the SD Card image `FunKey-sdcard-X.Y.Z.img` an
 When using a Docker container, all the prerequisites are automatically installed.
 
 ### How to get the sources
-When using a Docker container, you must first create a new directory (here we create a `FunKey-OS` directory) and get the FunKey-OS [Dockerfile](https://github.com/FunKey-Project/FunKey-OS/blob/master/docker/Dockerfile):
+When using a Docker container, you must first create a new directory (here we create a `FunKey-OS` directory) and get the FunKey-OS [Dockerfile](https://github.com/sdhizumi/FunKey-OS/blob/master/docker/Dockerfile):
 ```bash
 $ mkdir FunKey-OS
 $ cd FunKey-OS
@@ -117,18 +117,18 @@ $ wget https://raw.githubusercontent.com/FunKey-Project/FunKey-OS/master/docker/
 
 You must then build the docker image (don't forget the final dot!):
 ```bash
-$ docker build -t funkeyproject/funkey-os .
+$ docker build -t sdhizumi/funkey-os .
 ```
 
 ### Build the disk image & firmware update files
 You may now build your FunKey with:
 ```bash
-$ docker run --name funkey-os funkeyproject/funkey-os
+$ docker run --name funkey-os sdhizumi/funkey-os
 ```
 
 Or alternatively, you can run it in the background with:
 ```bash
-$ docker run -d --name funkey-os funkeyproject/funkey-os
+$ docker run -d --name funkey-os sdhizumi/funkey-os
 ```
 
 If you launch it in the background, you can still follow what is going on with either:
