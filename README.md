@@ -80,7 +80,7 @@ $ sudo apt install bash bc binutils build-essential bzip2 ca-certificates cpio c
 When using either physical or virtual Linux machines, you must clone the FunKey OS repository from Github (here we place it into a `FunKey-OS` directory):
 
 ```bash
-$ git clone https://github.com/sdhizumi/FunKey-OS.git FunKey-OS
+$ git clone --recursive https://github.com/sdhizumi/FunKey-OS.git FunKey-OS
 ```
 
 Then enter into the created directory:
