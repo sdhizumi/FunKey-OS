@@ -8,12 +8,3 @@
  SYSROOT   = $(shell $(CC) --print-sysroot)
 
  PROCS     = -j4
-@@ -62,7 +63,7 @@ fceumm_TYPES = fds,nes,unf,unif
- fmsx_REPO = https://github.com/libretro/fmsx-libretro
- fmsx_TYPES = rom,mx1,mx2,dsk,cas
-
--gambatte_REPO = https://github.com/libretro/gambatte-libretro
-+gambatte_REPO = https://github.com/sdhizumi/gambatte-libretro
- gambatte_TYPES = gb,gbc,dmg,zip
-
- gme_REPO = https://github.com/libretro/libretro-gme
