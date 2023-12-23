@@ -73,6 +73,11 @@ While Buildroot itself will build most host packages it needs for the compilatio
 
 On Ubuntu/Debian Linux, this is achieved by running the following command:
 ```bash
+$ sudo apt install bash bc binutils build-essential bzip2 ca-certificates cpio cvs expect file g++ gcc git gzip liblscp-dev libncurses5-dev locales make mercurial openssh-client patch perl procps python-dev python-is-python3 python3 python3-dev python3-distutils python3-setuptools rsync rsync sed subversion sudo tar unzip wget xxd zip
+```
+
+On old Ubuntu/Debian Linux distros (e.g. Ubuntu 18.04), this is achieved by running the following command:
+```bash
 $ sudo apt install bash bc binutils build-essential bzip2 ca-certificates cpio cvs expect file g++ gcc git gzip liblscp-dev libncurses5-dev locales make mercurial openssh-client patch perl procps python python-dev python3 python3-dev python3-distutils python3-setuptools rsync rsync sed subversion sudo tar unzip wget which xxd zip
 ```
 
