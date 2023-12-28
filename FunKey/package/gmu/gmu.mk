@@ -22,9 +22,11 @@ define GMU_BUILD_CMDS
 endef
 
 define GMU_INSTALL_TARGET_CMDS
+	mkdir -p $(@D)/opk/decoders && touch $(@D)/opk/decoders/dummy
+	mkdir -p $(@D)/opk/frontends && touch $(@D)/opk/frontends/dummy
 	$(INSTALL) -d -m 0755 $(TARGET_DIR)/usr/bin/gmu/decoders
 	$(INSTALL) -d -m 0755 $(TARGET_DIR)/usr/bin/gmu/frontends
-	$(INSTALL) -m 0755 $(@D)/opk/gmu $(TARGET_DIR)/usr/bin/gmu
+	$(INSTALL) -m 0755 $(@D)/opk/gmu.dge $(TARGET_DIR)/usr/bin/gmu.dge
 	$(INSTALL) -m 0755 $(@D)/opk/decoders/* $(TARGET_DIR)/usr/bin/gmu/decoders
 	$(INSTALL) -m 0755 $(@D)/opk/frontends/* $(TARGET_DIR)/usr/bin/gmu/frontends
 endef
