@@ -10,15 +10,10 @@ OPENSANS_SITE = https://github.com/googlefonts/opensans.git
 OPENSANS_LICENSE = OFL
 OPENSANS_LICENSE_FILES = OFL.txt
 
-OPENSANS_FONTS_INSTALL = *.ttf
-
 define OPENSANS_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/fonts/opensans/
-	for i in $(OPENSANS_FONTS_INSTALL) ; do \
-		$(INSTALL) -m 0644 $(@D)/fonts/ttf/$$i \
-			$(TARGET_DIR)/usr/share/fonts/opensans/ || exit 1 ; \
-	done
-	$(OPENSANS_FONTCONFIG_CONF_INSTALL_CMDS)
+	cd $(@D)/fonts/ttf/
+	install -m 0644 *.ttf $(TARGET_DIR)/usr/share/fonts/opensans/
 endef
 
 $(eval $(generic-package))

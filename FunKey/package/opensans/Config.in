@@ -1,6 +1,7 @@
 config BR2_PACKAGE_OPENSANS
-	bool "Open Sans"
+	bool "opensans"
 	help
-	  	Open Sans is a humanist sans serif typeface designed by Steve Matteson, Type Director of Ascender Corp.
+	  Open Sans is a humanist sans serif typeface designed by Steve Matteson, Type Director of Ascender Corp.
+
 
 	  https://fonts.google.com/specimen/Open+Sans/
