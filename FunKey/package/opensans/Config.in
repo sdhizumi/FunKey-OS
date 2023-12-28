@@ -1,5 +1,6 @@
 config BR2_PACKAGE_OPENSANS
 	bool "opensans"
+	default y
 	help
 	  Open Sans is a humanist sans serif typeface designed by Steve Matteson, Type Director of Ascender Corp.
 

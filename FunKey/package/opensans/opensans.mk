@@ -12,8 +12,7 @@ OPENSANS_LICENSE_FILES = OFL.txt
 
 define OPENSANS_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/fonts/opensans/
-	cd $(@D)/fonts/ttf/
-	install -m 0644 *.ttf $(TARGET_DIR)/usr/share/fonts/opensans/
+	install -m 0644 $(@D)/fonts/ttf/*.ttf $(TARGET_DIR)/usr/share/fonts/opensans/
 endef
 
 $(eval $(generic-package))
