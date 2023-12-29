@@ -1,4 +1,4 @@
 [submodule "buildroot"]
 	path = buildroot
-	url = https://github.com/sdhizumi/funkeyos-buildroot.git
+	url = https://github.com/sdhizumi/buildroot.git
 	branch = rg_nano
