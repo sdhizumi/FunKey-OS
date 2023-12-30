@@ -1,0 +1,20 @@
+config BR2_PACKAGE_PICOARCH_CORES_EXPERIMENTAL
+	bool "picoarch-cores-extra"
+	default y
+	help
+	  Pre-build libretro cores for FunKey-OS (Experimental cores added by sdhizumi)
+
+
+	  https://github.com/sdhizumi/picoarch/releases
+
+if BR2_PACKAGE_PICOARCH_CORES_EXPERIMENTAL
+
+config BR2_PACKAGE_PICOARCH_CORES_EXPERIMENTAL_MGBA
+	bool "mgba_libretro"
+	default y
+
+config BR2_PACKAGE_PICOARCH_CORES_EXPERIMENTAL_VBA_NEXT
+	bool "vba_next_libretro"
+	default y
+
+endif

@@ -1,0 +1,28 @@
+config BR2_PACKAGE_PICOARCH_CORES_EXTRA
+	bool "picoarch-cores-extra"
+	default y
+	help
+	  Pre-build libretro cores for FunKey-OS (Extra cores)
+
+
+	  https://github.com/sdhizumi/picoarch/releases
+
+if BR2_PACKAGE_PICOARCH_CORES_EXTRA
+
+config BR2_PACKAGE_PICOARCH_CORES_EXTRA_MAME2003_PLUS
+	bool "mame2003_plus_libretro"
+	default y
+
+config BR2_PACKAGE_PICOARCH_CORES_EXTRA_PRBOOM
+	bool "prboom_libretro"
+	default y
+
+config BR2_PACKAGE_PICOARCH_CORES_EXTRA_SCUMMVM
+	bool "scummvm_libretro"
+	default y
+
+config BR2_PACKAGE_PICOARCH_CORES_TYRQUAKE
+	bool "tyrquake_libretro"
+	default y
+
+endif

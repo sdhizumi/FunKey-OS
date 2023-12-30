@@ -1,0 +1,104 @@
+config BR2_PACKAGE_PICOARCH_CORES
+	bool "picoarch-cores"
+	default y
+	help
+	  Pre-build libretro cores for FunKey-OS
+
+
+	  https://github.com/sdhizumi/picoarch/releases
+
+if BR2_PACKAGE_PICOARCH_CORES
+
+config BR2_PACKAGE_PICOARCH_CORES_BEETLE_PCE_FAST
+	bool "beetle-pce-fast_libretro"
+	default y
+
+config BR2_PACKAGE_PICOARCH_CORES_BLUEMSX
+	bool "bluemsx_libretro"
+	default y
+
+config BR2_PACKAGE_PICOARCH_DOSBOX_PURE
+	bool "dosbox-pure_libretro"
+	default y
+
+config BR2_PACKAGE_PICOARCH_FAKE_08
+	bool "fake-08_libretro"
+	default y
+
+config BR2_PACKAGE_PICOARCH_FBALPHA2012
+	bool "fbalpha2012_libretro_libretro"
+	default y
+
+config BR2_PACKAGE_PICOARCH_CORES_FCEUMM
+	bool "fceumm_libretro"
+	default y
+
+config BR2_PACKAGE_PICOARCH_CORES_FMSX
+	bool "fmsx_libretro"
+	default y
+
+config BR2_PACKAGE_PICOARCH_CORES_GAMBATTE
+	bool "gambatte_libretro"
+	default y
+
+config BR2_PACKAGE_PICOARCH_CORES_GME
+	bool "gme_libretro"
+	default y
+
+config BR2_PACKAGE_PICOARCH_CORES_GPSP
+	bool "gpsp_libretro"
+	default y
+
+config BR2_PACKAGE_PICOARCH_CORES_MAME2000
+	bool "mame2000_libretro"
+	default y
+
+config BR2_PACKAGE_PICOARCH_CORES_MEDNAFEN_NGP
+	bool "mednafen_ngp_libretro"
+	default y
+
+config BR2_PACKAGE_PICOARCH_CORES_MEDNAFEN_WSWAN
+	bool "mednafen_wswan_libretro"
+	default y
+
+config BR2_PACKAGE_PICOARCH_CORES_PCSX_REARMED
+	bool "pcsx_rearmed_libretro"
+	default y
+
+config BR2_PACKAGE_PICOARCH_CORES_PICODRIVE
+	bool "picodrive_libretro"
+	default y
+
+config BR2_PACKAGE_PICOARCH_CORES_POKEMINI
+	bool "pokemini_libretro"
+	default y
+
+config BR2_PACKAGE_PICOARCH_CORES_QUICKNES
+	bool "quicknes_libretro"
+	default y
+
+config BR2_PACKAGE_PICOARCH_CORES_SMSPLUS_GX
+	bool "smsplus-gx_libretro"
+	default y
+
+config BR2_PACKAGE_PICOARCH_CORES_SNES9X2002
+	bool "snes9x2002_libretro"
+	default y
+
+config BR2_PACKAGE_PICOARCH_CORES_SNES9X2005
+	bool "snes9x2005_libretro"
+	default y
+
+config BR2_PACKAGE_PICOARCH_CORES_SNES9X2005_PLUS
+	bool "snes9x2005_plus_libretro"
+	default y
+
+config BR2_PACKAGE_PICOARCH_CORES_SNES9X2010
+	bool "snes9x2010_libretro"
+	default y
+
+config BR2_PACKAGE_PICOARCH_CORES_STELLA2014
+	bool "stella2014_libretro"
+	default y
+
+endif

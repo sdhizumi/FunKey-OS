@@ -24,3 +24,6 @@ source "$BR2_EXTERNAL_FUNKEY_PATH/package/st-sdl/Config.in"
 source "$BR2_EXTERNAL_FUNKEY_PATH/package/gmu/Config.in"
 source "$BR2_EXTERNAL_FUNKEY_PATH/package/picoarch-gambatte/Config.in"
 source "$BR2_EXTERNAL_FUNKEY_PATH/package/opensans/Config.in"
+source "$BR2_EXTERNAL_FUNKEY_PATH/package/picoarch-cores/Config.in"
+#source "$BR2_EXTERNAL_FUNKEY_PATH/package/picoarch-cores-extra/Config.in" #Need more about +230M space
+source "$BR2_EXTERNAL_FUNKEY_PATH/package/picoarch-cores-experimental/Config.in"
