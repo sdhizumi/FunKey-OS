@@ -17,15 +17,15 @@ config BR2_PACKAGE_PICOARCH_CORES_BLUEMSX
 	bool "bluemsx_libretro"
 	default y
 
-config BR2_PACKAGE_PICOARCH_DOSBOX_PURE
+config BR2_PACKAGE_PICOARCH_CORES_DOSBOX_PURE
 	bool "dosbox-pure_libretro"
 	default y
 
-config BR2_PACKAGE_PICOARCH_FAKE_08
+config BR2_PACKAGE_PICOARCH_CORES_FAKE_08
 	bool "fake-08_libretro"
 	default y
 
-config BR2_PACKAGE_PICOARCH_FBALPHA2012
+config BR2_PACKAGE_PICOARCH_CORES_FBALPHA2012
 	bool "fbalpha2012_libretro_libretro"
 	default y
 
