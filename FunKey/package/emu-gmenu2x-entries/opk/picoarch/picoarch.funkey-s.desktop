@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=picoarch
+Comment=libretro frontend (picoarch)
+Icon=picoarch
+Exec=/usr/games/launchers/picoarch_launch.sh %f
+SelectorBrowser=true
+SelectorDir=/mnt/Libretro
+SelectorFilter=min,MIN
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=emulators

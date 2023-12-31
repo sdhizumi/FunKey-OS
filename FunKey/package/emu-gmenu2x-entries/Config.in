@@ -137,4 +137,8 @@ config BR2_PACKAGE_EMU_GMENU2X_ENTRIES_WONDERSWAN_COLOR
 	bool "emu-gmenu2x-entries-wonderswan-color"
 	default n
 
+config BR2_PACKAGE_EMU_GMENU2X_ENTRIES_PICOARCH
+	bool "emu-gmenu2x-entries-picoarch"
+	default n
+
 endif
