@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=SFC
+Comment=Super Famicom emulator
+Icon=sfc
+Exec=/usr/games/launchers/snes_launch.sh %f
+SelectorBrowser=true
+SelectorDir=/mnt/SNES
+SelectorFilter=sfc,SFC,smc,fig,FIG,SMC,gd3,GD3,gd7,GD7,dx2,DX2,bsx,BSX,swc,SWC,zip,ZIP
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=emulators

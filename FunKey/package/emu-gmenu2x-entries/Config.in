@@ -1,0 +1,140 @@
+config BR2_PACKAGE_EMU_GMENU2X_ENTRIES
+	bool "emu-gmenu2x-entries"
+	default y
+	help
+	  .opk entries for Gmenu2x.
+	  This script is only installing emulator platforms .opk shortcut to:
+	  FunKey-OS/FunKey/board/funkey/rootfs-overlay/usr/games/launchers/*_launch.sh
+	  You shoud edit these shellscripts that you want to change call from this.
+	  Note: These shellscripts has been using by RetroFE, 
+	  FunKey-OS can be selecting menu program from RetroFE and Gmenu2x.
+	  Icons based by Systematic from retroarch-assets.
+	  It is under lisenced by Creative Commons Attribution 4.0 International Public License.
+	  
+
+
+	  https://github.com/libretro/retroarch-assets
+
+if BR2_PACKAGE_EMU_GMENU2X_ENTRIES
+
+config BR2_PACKAGE_EMU_GMENU2X_ENTRIES_DOOM
+	bool "emu-gmenu2x-entries-doom"
+	default n
+
+config BR2_PACKAGE_EMU_GMENU2X_ENTRIES_DOSBOX
+	bool "emu-gmenu2x-entries-dosbox"
+	default n
+
+config BR2_PACKAGE_EMU_GMENU2X_ENTRIES_FBALPHA
+	bool "emu-gmenu2x-entries-fbalpha"
+	default n
+
+config BR2_PACKAGE_EMU_GMENU2X_ENTRIES_FC
+	bool "emu-gmenu2x-entries-fc"
+	default n
+
+config BR2_PACKAGE_EMU_GMENU2X_ENTRIES_NES
+	bool "emu-gmenu2x-entries-nes"
+	default n
+
+config BR2_PACKAGE_EMU_GMENU2X_ENTRIES_GB
+	bool "emu-gmenu2x-entries-gb"
+	default n
+
+config BR2_PACKAGE_EMU_GMENU2X_ENTRIES_GBC
+	bool "emu-gmenu2x-entries-gbc"
+	default n
+
+config BR2_PACKAGE_EMU_GMENU2X_ENTRIES_GBA
+	bool "emu-gmenu2x-entries-gba"
+	default n
+
+config BR2_PACKAGE_EMU_GMENU2X_ENTRIES_GBA_SP
+	bool "emu-gmenu2x-entries-gba-sp"
+	default n
+
+config BR2_PACKAGE_EMU_GMENU2X_ENTRIES_GG
+	bool "emu-gmenu2x-entries-gg"
+	default n
+
+config BR2_PACKAGE_EMU_GMENU2X_ENTRIES_GME
+	bool "emu-gmenu2x-entries-gme"
+	default n
+
+config BR2_PACKAGE_EMU_GMENU2X_ENTRIES_NGP
+	bool "emu-gmenu2x-entries-ngp"
+	default n
+
+config BR2_PACKAGE_EMU_GMENU2X_ENTRIES_MAME
+	bool "emu-gmenu2x-entries-mame"
+	default n
+
+config BR2_PACKAGE_EMU_GMENU2X_ENTRIES_MD_JA
+	bool "emu-gmenu2x-entries-md-ja"
+	default n
+
+config BR2_PACKAGE_EMU_GMENU2X_ENTRIES_MD_EU
+	bool "emu-gmenu2x-entries-md-eu"
+	default n
+
+config BR2_PACKAGE_EMU_GMENU2X_ENTRIES_GENESIS
+	bool "emu-gmenu2x-entries-genesis"
+	default n
+
+config BR2_PACKAGE_EMU_GMENU2X_ENTRIES_MSX
+	bool "emu-gmenu2x-entries-msx"
+	default n
+
+config BR2_PACKAGE_EMU_GMENU2X_ENTRIES_PCE
+	bool "emu-gmenu2x-entries-pce"
+	default n
+
+config BR2_PACKAGE_EMU_GMENU2X_ENTRIES_TG16
+	bool "emu-gmenu2x-entries-tg16"
+	default n
+
+config BR2_PACKAGE_EMU_GMENU2X_ENTRIES_PICO_8
+	bool "emu-gmenu2x-entries-pico-8"
+	default n
+
+config BR2_PACKAGE_EMU_GMENU2X_ENTRIES_POKEMINI
+	bool "emu-gmenu2x-entries-pokemini"
+	default n
+
+config BR2_PACKAGE_EMU_GMENU2X_ENTRIES_PS1
+	bool "emu-gmenu2x-entries-ps1"
+	default n
+
+config BR2_PACKAGE_EMU_GMENU2X_ENTRIES_SCUMMVM
+	bool "emu-gmenu2x-entries-scummvm"
+	default n
+
+config BR2_PACKAGE_EMU_GMENU2X_ENTRIES_SFC
+	bool "emu-gmenu2x-entries-sfc"
+	default n
+
+config BR2_PACKAGE_EMU_GMENU2X_ENTRIES_SNES
+	bool "emu-gmenu2x-entries-snes"
+	default n
+
+config BR2_PACKAGE_EMU_GMENU2X_ENTRIES_SMS
+	bool "emu-gmenu2x-entries-sms"
+	default n
+
+config BR2_PACKAGE_EMU_GMENU2X_ENTRIES_QUAKE
+	bool "emu-gmenu2x-entries-quake"
+	default n
+
+config BR2_PACKAGE_EMU_GMENU2X_ENTRIES_VCS
+	bool "emu-gmenu2x-entries-vcs"
+	default n
+
+config BR2_PACKAGE_EMU_GMENU2X_ENTRIES_WONDERSWAN
+	bool "emu-gmenu2x-entries-wonderswan"
+	default n
+
+config BR2_PACKAGE_EMU_GMENU2X_ENTRIES_WONDERSWAN_COLOR
+	bool "emu-gmenu2x-entries-wonderswan-color"
+	default n
+
+endif

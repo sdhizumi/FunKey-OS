@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=NES
+Comment=Nintendo Entertainment System emulator
+Icon=nes
+Exec=/usr/games/launchers/nes_launch.sh %f
+SelectorBrowser=true
+SelectorDir=/mnt/NES
+SelectorFilter=nes,NES,fds,FDS,unf,UNF,unif,UNIF,zip,ZIP
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=emulators

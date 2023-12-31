@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=ScummVM
+Comment=ScummVM
+Icon=scummvm
+Exec=/usr/games/launchers/scummvm_launch.sh %f
+SelectorBrowser=true
+SelectorDir=/mnt/ScummVM
+SelectorFilter=scummvm,SCUMMVM
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=emulators

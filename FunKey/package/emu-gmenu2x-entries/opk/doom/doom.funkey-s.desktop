@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=DOOM
+Comment=Doom Engine port (prboom)
+Icon=doom
+Exec=/usr/games/launchers/doom_launch.sh %f
+SelectorBrowser=true
+SelectorDir=/mnt/DOOM
+SelectorFilter=wad,WAD,iwad,IWAD,pwad,PWAD,lmp,LMP
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=emulators

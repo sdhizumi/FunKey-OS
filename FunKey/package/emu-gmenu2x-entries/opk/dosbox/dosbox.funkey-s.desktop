@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=DOSBox
+Comment=DOSBox (dosbox-pure)
+Icon=dosbox
+Exec=/usr/games/launchers/dosbox_launch.sh %f
+SelectorBrowser=true
+SelectorDir=/mnt/DOSBox
+SelectorFilter=zip,dosz,exe,com,bat,iso,cue,ins,img,ima,vhd,jrc,tc,m3u,m3u8,conf
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=emulators

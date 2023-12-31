@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=MSX
+Comment=MSX/2/2+ emulator (fMSX)
+Icon=msx
+Exec=/usr/games/launchers/msx_launch.sh %f
+SelectorBrowser=true
+SelectorDir=/mnt/MSX
+SelectorFilter=rom,mx1,mx2,dsk,cas
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=emulators

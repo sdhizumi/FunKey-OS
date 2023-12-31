@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Lynx
+Comment=Atari Lynx emulator
+Icon=lynx
+Exec=/usr/games/launchers/lynx_launch.sh %f
+SelectorBrowser=true
+SelectorDir=/mnt/Atari lynx
+SelectorFilter=zip,ZIP,lnx,LNX
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=emulators

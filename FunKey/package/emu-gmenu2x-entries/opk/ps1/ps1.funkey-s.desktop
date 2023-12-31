@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=PS1
+Comment=PlayStation emulator
+Icon=ps1
+Exec=/usr/games/launchers/psone_launch.sh %f
+SelectorBrowser=true
+SelectorDir=/mnt/PS1
+SelectorFilter=bin,BIN,cue,CUE,img,IMG,mdf,MDF,pbp,PBP,toc,TOC,cbn,CBN,m3u,chd,CHD
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=emulators

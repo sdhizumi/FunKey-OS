@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=FB Alpha
+Comment=Arcade emulator (fbalpha2012)
+Icon=fbalpha
+Exec=/usr/games/launchers/fbalpha_launch.sh %f
+SelectorBrowser=true
+SelectorDir=/mnt/Arcade
+SelectorFilter=zip,ZIP
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=emulators

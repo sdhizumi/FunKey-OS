@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=GME
+Comment=Game Music Emu (Sound chip emulation player)
+Icon=gme
+Exec=/usr/games/launchers/gme_launch.sh %f
+SelectorBrowser=true
+SelectorDir=/mnt/gme
+SelectorFilter=ay,gbs,gym,hes,kss,nsf,nsfe,sap,spc,vgm,vgz,zip
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=emulators

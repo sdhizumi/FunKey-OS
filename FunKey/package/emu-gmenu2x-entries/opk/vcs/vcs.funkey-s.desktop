@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=VCS
+Comment=Atari VCS (2600) emulator
+Icon=vcs
+Exec=/usr/games/launchers/vcs_launch.sh %f
+SelectorBrowser=true
+SelectorDir=/mnt/Atari 2600
+SelectorFilter=a26,A26,bin,BIN
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=emulators

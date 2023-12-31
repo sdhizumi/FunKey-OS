@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=PICO-8
+Comment=PICO-8 emulator (FAKE-08)
+Icon=pico-8
+Exec=/usr/games/launchers/pico-8_launch.sh %f
+SelectorBrowser=true
+SelectorDir=/mnt/PICO-8
+SelectorFilter=p8,P8,png,PNG
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=emulators

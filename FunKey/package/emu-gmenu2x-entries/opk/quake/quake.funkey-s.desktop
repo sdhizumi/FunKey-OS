@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Quake
+Comment=Quake Engine port (tyrquake)
+Icon=quake
+Exec=/usr/games/launchers/quake_launch.sh %f
+SelectorBrowser=true
+SelectorDir=/mnt/Quake
+SelectorFilter=pak,PAK
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=emulators

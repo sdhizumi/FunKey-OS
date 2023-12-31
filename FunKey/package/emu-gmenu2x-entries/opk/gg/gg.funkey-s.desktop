@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=GG
+Comment=Game Gear emulator
+Icon=gamegear
+Exec=/usr/games/launchers/gamegear_launch.sh %f
+SelectorBrowser=true
+SelectorDir=/mnt/Game Gear
+SelectorFilter=zip,ZIP,bin,BIN,gg,GG,sms,SMS
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=emulators

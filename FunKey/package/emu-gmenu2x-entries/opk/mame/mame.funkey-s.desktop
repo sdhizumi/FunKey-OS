@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=MAME2000
+Comment=Arcade emulator (MAME2000)
+Icon=mame
+Exec=/usr/games/launchers/mame2000_launch.sh %f
+SelectorBrowser=true
+SelectorDir=/mnt/Arcade
+SelectorFilter=zip,ZIP
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=emulators
