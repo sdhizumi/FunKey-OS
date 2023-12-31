@@ -47,10 +47,10 @@ define FCEUX_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 $(@D)/fceux/fceux $(TARGET_DIR)/usr/games/fceux
 endef
 
-define FCEUX_CREATE_OPK
-	$(INSTALL) -d -m 0755 $(TARGET_DIR)/usr/local/share/OPKs/Emulators
-	$(HOST_DIR)/usr/bin/mksquashfs $(FCEUX_PKGDIR)/opk/nes $(TARGET_DIR)/usr/local/share/OPKs/Emulators/nes_fceux_funkey-s.opk -all-root -noappend -no-exports -no-xattrs
-endef
-FCEUX_POST_INSTALL_TARGET_HOOKS += FCEUX_CREATE_OPK
+# define FCEUX_CREATE_OPK
+# 	$(INSTALL) -d -m 0755 $(TARGET_DIR)/usr/local/share/OPKs/Emulators
+# 	$(HOST_DIR)/usr/bin/mksquashfs $(FCEUX_PKGDIR)/opk/nes $(TARGET_DIR)/usr/local/share/OPKs/Emulators/nes_fceux_funkey-s.opk -all-root -noappend -no-exports -no-xattrs
+# endef
+# FCEUX_POST_INSTALL_TARGET_HOOKS += FCEUX_CREATE_OPK
 
 $(eval $(generic-package))

@@ -44,10 +44,10 @@ define PICODRIVE_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 $(@D)/PicoDrive $(TARGET_DIR)/usr/games/
 endef
 
-define PICODRIVE_CREATE_OPK
-	$(INSTALL) -d -m 0755 $(TARGET_DIR)/usr/local/share/OPKs/Emulators
-	$(HOST_DIR)/usr/bin/mksquashfs $(PICODRIVE_PKGDIR)/opk/megadrive $(TARGET_DIR)/usr/local/share/OPKs/Emulators/megadrive_picodrive_funkey-s.opk -all-root -noappend -no-exports -no-xattrs
-endef
-PICODRIVE_POST_INSTALL_TARGET_HOOKS += PICODRIVE_CREATE_OPK
+# define PICODRIVE_CREATE_OPK
+# 	$(INSTALL) -d -m 0755 $(TARGET_DIR)/usr/local/share/OPKs/Emulators
+# 	$(HOST_DIR)/usr/bin/mksquashfs $(PICODRIVE_PKGDIR)/opk/megadrive $(TARGET_DIR)/usr/local/share/OPKs/Emulators/megadrive_picodrive_funkey-s.opk -all-root -noappend -no-exports -no-xattrs
+# endef
+# PICODRIVE_POST_INSTALL_TARGET_HOOKS += PICODRIVE_CREATE_OPK
 
 $(eval $(generic-package))

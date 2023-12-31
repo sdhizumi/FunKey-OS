@@ -41,10 +41,10 @@ define PICOARCH_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 $(@D)/picoarch $(TARGET_DIR)/usr/games/
 endef
 
-define PICOARCH_CREATE_OPK
-	$(INSTALL) -d -m 0755 $(TARGET_DIR)/usr/local/share/OPKs/Libretro
-	$(HOST_DIR)/usr/bin/mksquashfs $(PICOARCH_PKGDIR)/opk $(TARGET_DIR)/usr/local/share/OPKs/Libretro/picoarch_funkey-s.opk -all-root -noappend -no-exports -no-xattrs
-endef
-PICOARCH_POST_INSTALL_TARGET_HOOKS += PICOARCH_CREATE_OPK
+# define PICOARCH_CREATE_OPK
+# 	$(INSTALL) -d -m 0755 $(TARGET_DIR)/usr/local/share/OPKs/Libretro
+# 	$(HOST_DIR)/usr/bin/mksquashfs $(PICOARCH_PKGDIR)/opk $(TARGET_DIR)/usr/local/share/OPKs/Libretro/picoarch_funkey-s.opk -all-root -noappend -no-exports -no-xattrs
+# endef
+# PICOARCH_POST_INSTALL_TARGET_HOOKS += PICOARCH_CREATE_OPK
 
 $(eval $(generic-package))

@@ -25,10 +25,10 @@ GNUBOY_CONF_OPTS += --without-fb \
 
 GNUBOY_CONF_ENV += SDL_CONFIG="$(STAGING_DIR)/usr/bin/sdl-config"
 
-define GNUBOY_CREATE_OPK
-	$(INSTALL) -d -m 0755 $(TARGET_DIR)/usr/local/share/OPKs/Emulators
-	$(HOST_DIR)/usr/bin/mksquashfs $(GNUBOY_PKGDIR)/opk/gb_gbc $(TARGET_DIR)/usr/local/share/OPKs/Emulators/gb_gbc_gnuboy_funkey-s.opk -all-root -noappend -no-exports -no-xattrs
-endef
-GNUBOY_POST_INSTALL_TARGET_HOOKS += GNUBOY_CREATE_OPK
+# define GNUBOY_CREATE_OPK
+# 	$(INSTALL) -d -m 0755 $(TARGET_DIR)/usr/local/share/OPKs/Emulators
+# 	$(HOST_DIR)/usr/bin/mksquashfs $(GNUBOY_PKGDIR)/opk/gb_gbc $(TARGET_DIR)/usr/local/share/OPKs/Emulators/gb_gbc_gnuboy_funkey-s.opk -all-root -noappend -no-exports -no-xattrs
+# endef
+# GNUBOY_POST_INSTALL_TARGET_HOOKS += GNUBOY_CREATE_OPK
 
 $(eval $(autotools-package))

@@ -31,10 +31,10 @@ define GMU_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 $(@D)/opk/frontends/* $(TARGET_DIR)/usr/bin/gmu/frontends
 endef
 
-define GMU_CREATE_OPK
-	$(INSTALL) -d -m 0755 $(TARGET_DIR)/usr/local/share/OPKs/Applications
-	$(HOST_DIR)/usr/bin/mksquashfs $(GMU_PKGDIR)/opk $(TARGET_DIR)/usr/local/share/OPKs/Applications/gmu_funkey-s.opk -all-root -noappend -no-exports -no-xattrs
-endef
-GMU_POST_INSTALL_TARGET_HOOKS += GMU_CREATE_OPK
+# define GMU_CREATE_OPK
+# 	$(INSTALL) -d -m 0755 $(TARGET_DIR)/usr/local/share/OPKs/Applications
+# 	$(HOST_DIR)/usr/bin/mksquashfs $(GMU_PKGDIR)/opk $(TARGET_DIR)/usr/local/share/OPKs/Applications/gmu_funkey-s.opk -all-root -noappend -no-exports -no-xattrs
+# endef
+# GMU_POST_INSTALL_TARGET_HOOKS += GMU_CREATE_OPK
 
 $(eval $(generic-package))

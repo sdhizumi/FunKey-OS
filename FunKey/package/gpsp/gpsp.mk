@@ -40,10 +40,10 @@ define GPSP_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0644 $(@D)/game_config.txt $(TARGET_DIR)/usr/games/game_config.txt
 endef
 
-define GPSP_CREATE_OPK
-	$(INSTALL) -d -m 0755 $(TARGET_DIR)/usr/local/share/OPKs/Emulators
-	$(HOST_DIR)/usr/bin/mksquashfs $(GPSP_PKGDIR)/opk/gba $(TARGET_DIR)/usr/local/share/OPKs/Emulators/gba_gpsp_funkey-s.opk -all-root -noappend -no-exports -no-xattrs
-endef
-GPSP_POST_INSTALL_TARGET_HOOKS += GPSP_CREATE_OPK
+# define GPSP_CREATE_OPK
+# 	$(INSTALL) -d -m 0755 $(TARGET_DIR)/usr/local/share/OPKs/Emulators
+# 	$(HOST_DIR)/usr/bin/mksquashfs $(GPSP_PKGDIR)/opk/gba $(TARGET_DIR)/usr/local/share/OPKs/Emulators/gba_gpsp_funkey-s.opk -all-root -noappend -no-exports -no-xattrs
+# endef
+# GPSP_POST_INSTALL_TARGET_HOOKS += GPSP_CREATE_OPK
 
 $(eval $(generic-package))
