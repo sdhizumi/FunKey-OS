@@ -1,6 +1,6 @@
 [Desktop Entry]
-Name=NES
-Comment=Nintendo Entertainment System emulator
+Name=NES/FC
+Comment=NES/FC emulator
 Icon=nes
 Exec=/usr/games/launchers/nes_launch.sh %f
 SelectorBrowser=true

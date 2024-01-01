@@ -1,6 +1,6 @@
 [Desktop Entry]
-Name=FC
-Comment=Family Computer emulator
+Name=NES/FC
+Comment=NES/FC emulator
 Icon=fc
 Exec=/usr/games/launchers/nes_launch.sh %f
 SelectorBrowser=true
