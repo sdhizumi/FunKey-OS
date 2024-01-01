@@ -61,6 +61,10 @@ config BR2_PACKAGE_EMU_GMENU2X_ENTRIES_GME
 	bool "emu-gmenu2x-entries-gme"
 	default n
 
+config BR2_PACKAGE_EMU_GMENU2X_ENTRIES_LYNX
+	bool "emu-gmenu2x-entries-lynx"
+	default n
+
 config BR2_PACKAGE_EMU_GMENU2X_ENTRIES_NGP
 	bool "emu-gmenu2x-entries-ngp"
 	default n

@@ -1,7 +1,7 @@
 [Desktop Entry]
-Name=GBC
+Name=GB/GBC
 Comment=Game Boy Color emulator
-Icon=gb
+Icon=gbc
 Exec=/usr/games/launchers/gb_launch.sh %f
 SelectorBrowser=true
 SelectorDir=/mnt/Game Boy
