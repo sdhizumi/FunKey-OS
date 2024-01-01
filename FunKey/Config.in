@@ -1,4 +1,4 @@
-source "$BR2_EXTERNAL_FUNKEY_PATH/package/mednafen/Config.in"
+#source "$BR2_EXTERNAL_FUNKEY_PATH/package/mednafen/Config.in"
 source "$BR2_EXTERNAL_FUNKEY_PATH/package/fkgpiod/Config.in"
 source "$BR2_EXTERNAL_FUNKEY_PATH/package/retrofe/Config.in"
 #source "$BR2_EXTERNAL_FUNKEY_PATH/package/PCSX-ReARMed/Config.in"
