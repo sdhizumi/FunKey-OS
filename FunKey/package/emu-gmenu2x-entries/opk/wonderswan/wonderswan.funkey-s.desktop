@@ -1,6 +1,6 @@
 [Desktop Entry]
-Name=WonderSwan
-Comment=WonderSwan/WonderSwan Color emulator
+Name=WS
+Comment=WonderSwan/Color emulator
 Icon=wonderswan
 Exec=/usr/games/launchers/wonderswan_launch.sh %f
 SelectorBrowser=true

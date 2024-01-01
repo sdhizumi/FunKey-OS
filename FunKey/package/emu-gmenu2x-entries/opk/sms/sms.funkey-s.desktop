@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=Master System
+Name=SMS
 Comment=Master System emulator
 Icon=sms
 Exec=/usr/games/launchers/sms_launch.sh %f
