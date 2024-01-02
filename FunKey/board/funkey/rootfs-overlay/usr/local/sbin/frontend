@@ -8,7 +8,7 @@ LAUNCHER_FILE="$HOME/Launchers/launcher.txt"
 FRONTEND_FILE="$HOME/.frontend"
 PREVENT_LAUNCHER_FILE="/mnt/prevent_launcher"
 DISABLE_FRONTEND_FILE="/mnt/disable_frontend"
-DEFAULT_FRONTEND=retrofe
+DEFAULT_FRONTEND=gmenu2x
 LOCK_FILE="/var/lock/frontend.lock"
 REBOOTING_FILE="/run/rebooting"
 LAST_OPK_FILE="/mnt/last_opk"
@@ -95,7 +95,7 @@ init_frontend() {
 			    ;;
 
 			*)
-			    DEFAULT_FRONTEND=retrofe
+			    DEFAULT_FRONTEND=gmenu2x
 			    echo "Unrecognized frontend: $frontend, setting $DEFAULT_FRONTEND"
 			    set_frontend "${DEFAULT_FRONTEND}"
 			    ;;
