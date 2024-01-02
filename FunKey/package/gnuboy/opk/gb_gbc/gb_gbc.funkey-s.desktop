@@ -4,5 +4,5 @@ Comment=Game Boy/Game Boy Color emulator
 Icon=gb_gbc
 Exec=/usr/games/launchers/gb_launch.sh %f
 Categories=emulators
-SelectorDir=/mnt/Game Boy
+SelectorDir=/mnt/GB-GBC
 SelectorFilter=gb,GB,gbc,GBC

@@ -4,5 +4,5 @@ Comment=PC-Engine CD-ROM emulator
 Icon=pce
 Exec=/usr/games/launchers/pce_launch.sh %f
 Categories=emulators
-SelectorDir=/mnt/PCE-TurboGrafx
+SelectorDir=/mnt/PCE-TG16
 SelectorFilter=zip,ZIP,pce,PCE,sgx,SGX,cue,CUE

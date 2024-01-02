@@ -4,5 +4,5 @@ Comment=WonderSwan/WonderSwan Color emulator
 Icon=wonderswan
 Exec=/usr/games/launchers/wonderswan_launch.sh %f
 Categories=emulators
-SelectorDir=/mnt/WonderSwan
+SelectorDir=/mnt/WS-WSC
 SelectorFilter=zip,ZIP,wsc,WSC,ws,WS

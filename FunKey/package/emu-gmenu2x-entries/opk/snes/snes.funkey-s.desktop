@@ -1,10 +1,10 @@
 [Desktop Entry]
-Name=SNES
-Comment=Super NES emulator
+Name=SNES/SFC
+Comment=SNES/SFC emulator
 Icon=snes
 Exec=/usr/games/launchers/snes_launch.sh %f
 SelectorBrowser=true
-SelectorDir=/mnt/SNES
+SelectorDir=/mnt/SNES-SFC
 SelectorFilter=sfc,SFC,smc,fig,FIG,SMC,gd3,GD3,gd7,GD7,dx2,DX2,bsx,BSX,swc,SWC,zip,ZIP
 Terminal=false
 Type=Application

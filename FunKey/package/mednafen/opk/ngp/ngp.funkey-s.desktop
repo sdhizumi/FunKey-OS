@@ -4,5 +4,5 @@ Comment=Neo-Geo Pocket emulator
 Icon=ngp
 Exec=/usr/games/launchers/ngp_launch.sh %f
 Categories=emulators
-SelectorDir=/mnt/Neo Geo Pocket
+SelectorDir=/mnt/NGP-NGPC
 SelectorFilter=zip,ZIP,ngp,NGP

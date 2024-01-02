@@ -1,10 +1,10 @@
 [Desktop Entry]
-Name=WS
+Name=WS/WSC
 Comment=WonderSwan/Color emulator
 Icon=wonderswan
 Exec=/usr/games/launchers/wonderswan_launch.sh %f
 SelectorBrowser=true
-SelectorDir=/mnt/WonderSwan
+SelectorDir=/mnt/WS-WSC
 SelectorFilter=zip,ZIP,wsc,WSC,ws,WS,pc2,PC2
 Terminal=false
 Type=Application

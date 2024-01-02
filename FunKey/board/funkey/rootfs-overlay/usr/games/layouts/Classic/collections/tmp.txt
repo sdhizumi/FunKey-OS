@@ -1,13 +1,13 @@
-./Game Gear/system_artwork/system.svg
-./Sega Master System/system_artwork/system.svg
-./Game Boy Advance/system_artwork/system.svg
+./GG/system_artwork/system.svg
+./SMS/system_artwork/system.svg
+./GBA/system_artwork/system.svg
 ./PS1/system_artwork/system2.svg
 ./PS1/system_artwork/system.svg
-./Game Boy/system_artwork/system.svg
-./NES/system_artwork/system2.svg
-./NES/system_artwork/system.svg
-./Atari lynx/system_artwork/system.svg
-./Sega Genesis/system_artwork/system.svg
-./SNES/system_artwork/system.svg
-./WonderSwan/system_artwork/system.svg
-./Neo Geo Pocket/system_artwork/system.svg
+./GB-GBC/system_artwork/system.svg
+./NES-FC/system_artwork/system2.svg
+./NES-FC/system_artwork/system.svg
+./Lynx/system_artwork/system.svg
+./MD-GEN/system_artwork/system.svg
+./SNES-SFC/system_artwork/system.svg
+./WS-WSC/system_artwork/system.svg
+./NGP-NGPC/system_artwork/system.svg

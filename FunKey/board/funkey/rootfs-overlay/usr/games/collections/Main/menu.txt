@@ -1,15 +1,15 @@
-Game Boy
-Game Boy Color
-Game Boy Advance
-NES
-SNES
-Game Gear
-Sega Master System
-Sega Genesis
-PCE-TurboGrafx
-Atari lynx
-Neo Geo Pocket
-WonderSwan
+GB-GBC
+GBA
+GG
+MD-GEN
+MSX
+NGP-NGPC
+NES-FC
+PokeMini
+PCE-TG16
+PICO8
 PS1
+SMS
+SNES-SFC
+WS-WSC
 Libretro
-Native games

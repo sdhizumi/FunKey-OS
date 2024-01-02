@@ -1,11 +1,11 @@
-./Game Gear/system_artwork/device.png
-./Sega Master System/system_artwork/device.png
-./Game Boy Advance/system_artwork/device.png
+./GG/system_artwork/device.png
+./SMS/system_artwork/device.png
+./GBA/system_artwork/device.png
 ./PS1/system_artwork/device.png
-./Game Boy/system_artwork/device.png
-./NES/system_artwork/device.png
-./Atari lynx/system_artwork/device.png
-./Sega Genesis/system_artwork/device.png
-./SNES/system_artwork/device.png
-./WonderSwan/system_artwork/device.png
-./Neo Geo Pocket/system_artwork/device.png
+./GB-GBC/system_artwork/device.png
+./NES-FC/system_artwork/device.png
+./Lynx/system_artwork/device.png
+./MD-GEN/system_artwork/device.png
+./SNES-SFC/system_artwork/device.png
+./WS-WSC/system_artwork/device.png
+./NGP-NGPC/system_artwork/device.png
