@@ -1,0 +1,13 @@
+diff --git a/funkey/fk_menu.c b/funkey/fk_menu.c
+index 1983dd9..04e665f 100644
+--- a/funkey/fk_menu.c
++++ b/funkey/fk_menu.c
+@@ -1525,7 +1525,7 @@ int FK_RunResumeMenu(SDL_Surface *hw_screen)
+     stop_menu_loop = 0;
+     uint8_t screen_refresh = 1;
+     uint8_t menu_confirmation = 0;
+-    int option_idx=RESUME_YES;
++    int option_idx=RESUME_NO;
+ 
+     /* Save prev key repeat params and set new Key repeat */
+     SDL_GetKeyRepeat(&backup_key_repeat_delay, &backup_key_repeat_interval);
