@@ -1,0 +1,5 @@
+config BR2_PACKAGE_UNARCHIVER_OPK
+	bool "unarchiver-opk"
+	default y
+	help
+	  unarchiver .opk entry for Gmenu2x.

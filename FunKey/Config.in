@@ -28,3 +28,4 @@ source "$BR2_EXTERNAL_FUNKEY_PATH/package/picoarch-cores/Config.in"
 #source "$BR2_EXTERNAL_FUNKEY_PATH/package/picoarch-cores-extra/Config.in" #Need more about +230M space
 source "$BR2_EXTERNAL_FUNKEY_PATH/package/picoarch-cores-experimental/Config.in"
 source "$BR2_EXTERNAL_FUNKEY_PATH/package/emu-gmenu2x-entries/Config.in"
+source "$BR2_EXTERNAL_FUNKEY_PATH/package/unarchiver-opk/Config.in"

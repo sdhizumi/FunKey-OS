@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Unarchiver
+Comment=Unarchiver (zip/gz/tar/tar.gz/rar/7z)
+Exec=unarchiver.sh %f
+Icon=unarchiver
+Categories=applications
+SelectorFilter=zip,gz,gtar,tgz,tar.gz,tar,rar,7z
