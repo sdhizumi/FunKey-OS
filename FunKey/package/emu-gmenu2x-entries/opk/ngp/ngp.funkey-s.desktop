@@ -1,6 +1,6 @@
 [Desktop Entry]
-Name=NGP
-Comment=Neo-Geo Pocket emulator
+Name=NGP/NGPC
+Comment=Neo-Geo Pocket/Color emulator
 Icon=ngp
 Exec=/usr/games/launchers/ngp_launch.sh %f
 SelectorBrowser=true
