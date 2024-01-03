@@ -1,0 +1,31 @@
+SDHIZ3x3 theme
+Icons based on Ultra-Flat icons by Steftrikia and FlatUX icons by baxysquare from Retroaech project.
+adwaita-d wallpaper from gnome-backgrounds.
+Font is Open Sans.
+
+Ultra-Flat Orange Folder Version
+Under licensed by Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+Downloaded from:
+https://launchpad.net/~noobslab/+archive/ubuntu/icons/+files/ultra-flat-icons-orange_1.3.2~xenial~Noobslab.com_all.deb
+Gnome-look.org page:
+https://www.gnome-look.org/p/1013707
+Fork version available (I didn't use from this. I knew this after I made this theme):
+https://github.com/kimifetch/yltra-flat-icon-theme
+
+FlatUX from libretro/retroarch-assets
+Under licensed by Creative Commons Attribution 4.0
+Downloaded from:
+https://github.com/libretro/retroarch-assets
+
+gnome-backgrounds
+Under licensed by Creative Commons Attribution-ShareAlike 3.0
+Downloaded from:
+https://gitlab.gnome.org/GNOME/gnome-backgrounds
+Image permalink:
+https://gitlab.gnome.org/GNOME/gnome-backgrounds/-/blob/70c8fa83308738be51911e62ef23fe1731368cd3/backgrounds/adwaita-d.jpg
+
+Open Sans
+Under licensed by SIL OPEN FONT LICENSE Version 1.1
+Downloaded from:
+https://fonts.google.com/specimen/Open+Sans
+
