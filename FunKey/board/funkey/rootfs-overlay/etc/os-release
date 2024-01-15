@@ -1,9 +1,9 @@
 NAME="FunKey-OS"
-VERSION="2.3.0-sd-1 (for LSDj Custom)"
+VERSION="2.3.0-sd-1.1 (for LSDj Custom)"
 ID=funkey
 ID_LIKE=buildroot
-PRETTY_NAME="FunKey-OS 2.3.0-sd-1"
-VERSION_ID="2.3.0-sd-1"
+PRETTY_NAME="FunKey-OS 2.3.0-sd-1.1"
+VERSION_ID="2.3.0-sd-1.1"
 HOME_URL="https://github.com/sdhizumi/FunKey-OS"
 SUPPORT_URL="https://github.com/sdhizumi/FunKey-OS"
 BUG_REPORT_URL="https://github.com/sdhizumi/FunKey-OS"
